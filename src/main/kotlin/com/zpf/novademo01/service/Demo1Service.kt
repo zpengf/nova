@@ -25,7 +25,7 @@ interface Demo1Service {
     /**
      * 通过id删除
      */
-    fun remove(id: Int): R<*>
+    fun remove(demo1Vo: Demo1Vo): R<*>
 
     /**
      * 查询

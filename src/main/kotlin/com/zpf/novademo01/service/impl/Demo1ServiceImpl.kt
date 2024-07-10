@@ -42,10 +42,10 @@ class Demo1ServiceImpl : Demo1Service {
         return R.ok(line,"更新成功")
     }
 
-    override fun remove(id: Int): R<*> {
+    override fun remove(demo1Vo: Demo1Vo): R<*> {
         var line = dslContext
                 .delete(DEMO1)
-                .where(DEMO1.ID.eq(id))
+                .where(DEMO1.ID.eq(demo1Vo.id))
                 .execute()
         return R.ok(line,"删除成功")
 

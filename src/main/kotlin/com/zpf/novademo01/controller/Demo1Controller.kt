@@ -27,8 +27,8 @@ class Demo1Controller {
     }
 
     @DeleteMapping
-    fun deleteOne(@RequestBody id: Int):R<*>{
-        return demo1Service.remove(id)
+    fun deleteOne(@RequestBody demo1Vo: Demo1Vo):R<*>{
+        return demo1Service.remove(demo1Vo)
     }
 
     @PostMapping
